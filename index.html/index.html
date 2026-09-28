@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#66bb6a">
+  <meta name="description" content="เกมฟาร์มปลูกผัก เก็บเกี่ยว ขาย และตกแต่งฟาร์ม">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>ฟาร์มสุขใจ</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>🌾 ฟาร์มสุขใจ</h1>
+      <p id="dayText">วันที่ 1 • ฟาร์มของฉัน</p>
+    </div>
+    <div class="money">💰 <span id="money">100</span></div>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div>🌱 แปลงว่าง <b id="emptyCount">9</b></div>
+      <div>🥕 ผักพร้อมเก็บ <b id="readyCount">0</b></div>
+      <button id="installBtn" class="install hidden">ติดตั้งแอป</button>
+    </section>
+
+    <section class="farm-card">
+      <div class="farm-title">
+        <h2>🌻 แปลงผัก</h2>
+        <span id="message">แตะแปลงเพื่อปลูกผัก</span>
+      </div>
+      <div id="farm" class="farm-grid"></div>
+    </section>
+
+    <section class="shop-section">
+      <h2>🛒 ร้านขายเมล็ดพันธุ์</h2>
+      <div id="seedShop" class="cards"></div>
+    </section>
+
+    <section class="decoration-section">
+      <h2>🏡 ร้านตกแต่งฟาร์ม</h2>
+      <p class="hint">ซื้อของตกแต่งแล้วแตะช่องฟาร์มเพื่อวาง</p>
+      <div id="decorShop" class="cards"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="close">×</button>
+      <h2 id="modalTitle">แปลงผัก</h2>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
